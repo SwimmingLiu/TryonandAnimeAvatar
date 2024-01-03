@@ -4,9 +4,9 @@
 
 基于HR-VITON的虚拟换衣 (Tryon) 和AnimeGANv3的动漫人物 (Anime Avatar) 小程序
 
-<img src="https://s11.ax1x.com/2024/01/03/pijbxeS.png" alt="image-20240103150359944" style="zoom:50%;" /><img src="https://s11.ax1x.com/2024/01/03/pijqCJs.png" alt="image-20240103144948278" style="zoom:50%;" /><img src="https://s11.ax1x.com/2024/01/03/pijqPWn.png" alt="image-20240103145035829" style="zoom:50%;" />
+<img src="https://s11.ax1x.com/2024/01/03/pijbxeS.png" alt="image-20240103150359944" style="width=100px;" /><img src="https://s11.ax1x.com/2024/01/03/pijqCJs.png" alt="image-20240103144948278" style="width=100px;" /><img src="https://s11.ax1x.com/2024/01/03/pijqPWn.png" alt="image-20240103145035829" style="width=100px;" />
 
-<img src="https://s11.ax1x.com/2024/01/03/pijbzdg.png" alt="image-20240103145144985" style="zoom:50%;" /><img src="https://s11.ax1x.com/2024/01/03/pijq9ij.png" alt="image-20240103150707136" style="zoom:50%;" /><img src="https://s11.ax1x.com/2024/01/03/pijqSoQ.png" alt="image-20240103150330684" style="zoom:50%;" />
+<img src="https://s11.ax1x.com/2024/01/03/pijbzdg.png" alt="image-20240103145144985" style="width=200px;" /><img src="https://s11.ax1x.com/2024/01/03/pijq9ij.png" alt="image-20240103150707136" style="width=200px;" /><img src="https://s11.ax1x.com/2024/01/03/pijqSoQ.png" alt="image-20240103150330684" style="width=200px;" />
 
 
 ## Workflow
