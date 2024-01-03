@@ -64,7 +64,7 @@ MysqlDataBase： Tryon 和 Anime Avatar 任务分别创建表，记录用户id�
 
 ### WorkFlow Graph
 
-![workflow graph](E:\研究生\程序设计课程\Pictures\流程图.png)
+![workflow graph](https://i1.wp.com/img.erpweb.eu.org/imgs/2024/01/13d00c023c3e7da0.png)
 
 ## Frame
 
