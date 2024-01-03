@@ -1,0 +1,44 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EFEFEF;
+}
+
+.card {
+    width: 85%;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    /* padding: 1rem; */
+    padding: 1rem;
+    background-color: #FFF;
+    border-radius: .75rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+
+    font-weight: bold;
+}
+
+.crad-img {
+    overflow: hidden;
+    /* border-radius: .75rem;
+    background-color: coral; */
+}
+
+.card-status {
+    margin-top: .5rem;
+    /* background-color: cadetblue; */
+    color: #333;
+    text-align: right;
+}

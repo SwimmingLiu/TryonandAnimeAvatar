@@ -1,0 +1,11 @@
+{
+    "usingComponents": {
+        "van-tab": "@vant/weapp/tab/index",
+        "van-tabs": "@vant/weapp/tabs/index",
+        "van-image": "@vant/weapp/image/index",
+        "van-uploader": "@vant/weapp/uploader/index",
+        "van-icon": "@vant/weapp/icon/index",
+        "van-popup": "@vant/weapp/popup/index"
+    },
+    "navigationBarTitleText": "梦幻变装"
+}

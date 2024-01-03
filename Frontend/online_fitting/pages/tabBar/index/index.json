@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "van-image": "@vant/weapp/image/index",
+        "van-popup": "@vant/weapp/popup/index"
+    },
+    "navigationBarTitleText": "奇幻风格"
+}

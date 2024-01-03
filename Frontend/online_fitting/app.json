@@ -1,0 +1,48 @@
+{
+    "lazyCodeLoading": "requiredComponents",
+    "pages": [
+        "pages/tabBar/index/index",
+        "pages/tabBar/fitting/fitting",
+        "pages/tabBar/my/my",
+        "pages/func/showResult/showResult",
+        "pages/func/history/history"
+    ],
+    "tabBar": {
+        "custom": true,
+        "backgroundColor": "#fff7f7",
+        "color": "#979795",
+        "selectedColor": "#1c1c1b",
+        "list": [
+            {
+                "pagePath": "pages/tabBar/index/index",
+                "iconPath": "/custom-tab-bar/icon/index.png",
+                "selectedIconPath": "/custom-tab-bar/icon/index.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/tabBar/fitting/fitting",
+                "iconPath": "/custom-tab-bar/icon/dress.png",
+                "selectedIconPath": "/custom-tab-bar/icon/dress.png",
+                "text": "分享"
+            },
+            {
+                "pagePath": "pages/tabBar/my/my",
+                "iconPath": "/custom-tab-bar/icon/my.png",
+                "selectedIconPath": "/custom-tab-bar/icon/my.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json",
+    "permission": {
+        "scope.writePhotosAlbum": {
+          "desc": "保存图片到相册"
+        }
+      }
+}

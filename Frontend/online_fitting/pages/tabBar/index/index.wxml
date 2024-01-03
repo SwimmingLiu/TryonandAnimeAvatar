@@ -1,0 +1,79 @@
+<view class="bigBox">
+
+    <view class="container">
+        <view class="Box">
+            <view class="imgBox zIndex" style="width: {{leftBoxWidth + 'rpx'}};">
+                <van-image src="{{prePath}}" width="700rpx" height="100%"/>
+            </view>
+
+            <view class='column' bind:touchmove="moveColumn" bind:touchstart="moveColumnStart" style="left: {{leftBoxWidth + 'rpx'}};">
+                <van-image src='/resource/image/sun.svg' width='2rem' height='2rem' />
+            </view>
+            
+            <view class="imgBox">
+                <van-image src="{{postPath}}" width="100%" height="100%"/>
+            </view>
+        </view>
+    </view>
+
+    <view class="showExample">
+        <view class="expBox" wx:for="{{showExample}}" wx:for-item="item" wx:key="id" bind:tap="chooseExp" data-id="{{item.id}}" 
+        class="{{selected_idx == item.id ? 'expBoxBorder' : 'expBox'}}">
+            <van-image src="{{item.prePath}}" width='200rpx' height='200rpx'/>
+        </view>
+    </view>
+
+    <view class="animeBtnBox">
+        <button class="animeBtn" bind:tap="submitImg">照片变卡通</button>
+    </view>
+
+    <van-popup show="{{ showPopup }}" round>
+        <view class="popup">
+            <view class="animation">
+                <view class="dot">
+                    <image src="../../../resource/image/emoji-3.svg"/>
+                </view>
+                <view class="dot dot-marginLeft animation-delay1">
+                    <image src="../../../resource/image/emoji-5.svg"/>
+                </view>
+                <view class="dot dot-marginLeft animation-delay2">
+                    <image src="../../../resource/image/emoji-9.svg"/>
+                </view>
+                <view class="dot dot-marginLeft animation-delay3">
+                    <image src="../../../resource/image/emoji-13.svg"/>
+                </view>
+            </view>
+
+            <view class="remindText">请稍稍等候，<view class="highlight-text">马上就好！</view></view>
+        </view>
+    </van-popup>
+
+
+    <view class="notLogin" wx:if="{{showLoginMask}}">
+        <view>
+            <image src="/resource/image/newyear.svg"/>
+            <view class="title">欢欢喜喜过大年</view>
+        </view>
+        <button bind:tap="loginBtn">微 信 登 录</button>
+    </view>
+
+    <view class="_Box">
+        <view class="_leftBox" bind:tap="popNone">
+            <image class="width100" src="/resource/image/office.svg" mode="widthFix"/>
+        </view>
+        <view class="_rightBox">
+            <view class="_topBox" bind:tap="popNone">
+                <image class="width100" src="/resource/image/read.svg" mode="widthFix"/>
+            </view>
+
+            <view class="_bottomBox">
+                <view class="_subLeftBox" bind:tap="popNone">
+                    <image class="width100" src="/resource/image/office.svg" mode="widthFix"/>
+                </view>
+                <view class="_subRightBox" bind:tap="popNone">
+                    <image class="width100" src="/resource/image/read.svg" mode="widthFix"/>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

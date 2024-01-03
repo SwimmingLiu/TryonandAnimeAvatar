@@ -1,0 +1,35 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.imgBox {
+    width: 700rpx;
+    border-radius: 1rem;
+    overflow: hidden;
+    /* background-color: coral; */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    width: 80%;
+    height: 100rpx;
+    line-height: 100rpx;
+    border-radius: 50rpx;
+    margin-top: 1.5rem;
+    font-style: oblique;
+    font-weight: bold;
+    background-color: rgb(90, 210, 200);
+}
+
+.btnBox {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+

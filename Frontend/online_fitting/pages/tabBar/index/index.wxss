@@ -1,0 +1,261 @@
+.bigBox {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #FAFAFA;
+    overflow: scroll;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    /* background-color: bisque; */
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+}
+
+.imgBox {
+    width: 100%;
+    height: 100%;
+    /* background-color: cadetblue; */
+    position: absolute;
+    display: block;
+    object-fit: none;
+    z-index: 9;
+}
+.zIndex {
+    z-index: 10;
+    overflow: hidden;
+}
+
+.Box {
+    position: relative;
+    width: 700rpx;
+    height: 600rpx;
+    background-color: chocolate;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.column {
+    left: 70%;
+    position: absolute;
+    height: 100%;
+    width: 6rpx;
+    background-color: #EFEFEF;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.showExample {
+    width: 100%;
+    height: 240rpx;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.expBox {
+    height: 200rpx;
+    /* border: 8rpx solid brown; */
+    border-radius: 5%;
+    overflow: hidden;
+}
+.expBoxBorder {
+    height: 200rpx;
+    border: 8rpx solid brown;
+    border-radius: 5%;
+}
+
+.animeBtnBox {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    /* background-color: #EEE; */
+}
+
+.animeBtn {
+    width: 80%;
+    color: #FFF;
+    background-color: rgb(233, 72, 88);
+    line-height: 100rpx;
+    height: 100rpx;
+    border-radius: 50rpx;
+}
+
+.popup {
+    width: 16rem;
+    height: 8rem;
+}
+.animation {
+    display: flex;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.remindText {
+    margin-top: 2.7rem;
+    text-align: center;
+}
+
+.highlight-text {
+    display: inline;
+    font-size: 20px;
+    color: chocolate;
+}
+
+.dot {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    /* background: #000; */
+    animation: myBounce 1.5s linear infinite ;
+}
+
+.dot > image {
+    width: 100%;
+    height: 100%;
+}
+
+.animation-delay1 {
+    animation-delay: .2s;
+}
+
+.animation-delay2 {
+    animation-delay: .4s;
+}
+
+.animation-delay3 {
+    animation-delay: .6s;
+}
+
+.dot-marginLeft {
+    margin-left: .5rem;
+}
+
+@keyframes myBounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-60%);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(60%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+.notLogin {
+    /* display: none; */
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    z-index: 99999;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.notLogin > img {
+    width: 11rem;
+    height: 11rem;
+}
+
+.title {
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 1.5rem;
+    font-size: 36px;
+    color: rgb(230,41,59);
+}
+
+.notLogin > button {
+    background-color: rgb(253, 225, 142);
+    color: rgb(230,41,59);
+    font-weight: bold;
+    width: 80%;
+    height: 3rem;
+    border-radius: 1.5rem;
+    border: 3px solid rgb(230,41,59);
+}
+
+.showLoginMask {
+    display: block;
+}
+
+.confirmView{
+    z-index: 100000;
+}
+
+._Box {
+    width: 90%;
+    display: flex;
+    align-self: center;
+    margin-bottom: 150rpx;
+}
+
+._leftBox {
+    width: 45%;
+    background-color: rgb(224,235,191);
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+._rightBox {
+    margin-left: .5rem;
+    width: 55%;
+}
+
+._topBox {
+    width: 100%;
+    background-color: moccasin;
+    border-radius: .75rem;
+}
+
+._bottomBox {
+    margin-top: .5rem;
+    width: 100%;
+    display: flex;
+}
+
+._subLeftBox {
+    width: 50%;
+    background-color: rgb(224,235,191);
+    border-radius: .5rem;
+}
+
+._subRightBox {
+    width: 50%;
+    background-color: rgb(173,195,226);
+    margin-left: .5rem;
+    border-radius: .5rem;
+    
+}
+
+.width100 {
+    width: 100%;
+}

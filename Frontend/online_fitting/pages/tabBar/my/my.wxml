@@ -1,0 +1,39 @@
+<!--pages/tabBar/my/my.wxml-->
+<view class="container">
+    <view class="userInfoBox" canvas-id="userInfoBox">
+        <view class="userInfo">
+            <van-image
+            id="userAvatar"
+            width="6rem"
+            height="6rem"
+            src="{{avatarUrl}}"
+            round
+            />
+            <text id="userName" class="userName">{{nickName}}</text>
+        </view>
+
+        <van-icon name="arrow" class="moreUserInfo"  bind:tap="popNone"/>
+    </view>
+
+    <view class="functionBox">
+        <view class="subFnBox" bind:tap="toHistory">
+            <view class="textIcon">
+                <van-icon name="like" class="historyIcon" /><text>历史记录</text>
+            </view>
+            <van-icon name="arrow" class="moreHistory" />
+        </view>
+        <view class="subFnBox" bind:tap="popNone">
+            <view class="textIcon">
+                <van-icon name="smile" class="historyIcon icon-color" /><text>随随便便</text>
+            </view>
+            <van-icon name="arrow" class="moreHistory" />
+        </view>
+        <view class="subFnBox" bind:tap="popNone">
+            <view class="textIcon">
+                <van-icon name="friends" class="teamIcon" /><text>关于团队</text>
+            </view>
+            <van-icon name="arrow" class="moreHistory" />
+        </view>
+    </view>
+    
+</view>

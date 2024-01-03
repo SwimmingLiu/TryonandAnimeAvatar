@@ -1,0 +1,10 @@
+<view class="container">
+    <view class="imgBox">
+        <van-image src="{{resPath}}" fit='widthFix' width="700rpx" />
+    </view>
+    
+    <view class="btnBox">
+        <button class="btn" bind:tap="saveToPhone">保存到手机</button>
+        <button class="btn" bind:tap="popNone">分享给朋友</button>
+    </view>
+</view>

@@ -1,0 +1,11 @@
+<view class="tabbar" wx:if="show">
+  <block wx:for="{{list}}" wx:key="index">
+    <view wx:if="{{item.isSpecial}}" class="tabbar-item" data-isSpecial="true"  data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+      <image class="special-icon" src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></image>
+    </view>
+    <view wx:else class="tabbar-item" data-isSpecial="false" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+      <image class="common-icon" src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></image>
+      <view style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</view>
+    </view>
+  </block>
+</view>

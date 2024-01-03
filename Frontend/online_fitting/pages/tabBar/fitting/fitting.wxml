@@ -1,0 +1,141 @@
+<view id="container" class="container">
+
+    <!-- 轮播图 -->
+    <view class="show_img">
+        <swiper autoplay indicator-dots	
+        indicator-color="rgba(255, 255, 255, 0.3)" 	
+        indicator-active-color="#FFF"
+        class="banner" circular interval="3000">
+            <swiper-item wx:for="{{swiperBanner}}" wx:for-item="item" wx:key="id">
+                <van-image src="{{item.url}}" 
+                        fit='cover'
+                        width="100%"
+                        height="100%"/>
+            </swiper-item>
+        </swiper>
+    </view>
+
+    <!-- 模特 -->
+    <van-tabs active="{{ 1 }}" bind:change="onChange" class="tabs" line-width='0'
+    title-active-color='#EE0F0F'>
+    <van-tab title='自定义' title-style='font-weight: bold;' style="position: relative;">
+            <!-- 传入自己的照片 -->
+            <view class="scroll"> 
+                <view class="selected_box">
+                    <view class="img_box">
+                        <van-uploader file-list="{{ fileList }}" deletable="{{ false }}" 
+                        max-count='1' preview-size='260rpx'class='uploader'
+                        accept="image" upload-text='上传您的全身照' image-fit='cover' preview-full-image='{{false}}'
+                        bind:tap="selectedRealModel"
+                        bind:after-read='readModel'/>
+
+                        <view class="{{selectedPersonUpload ? 'selected_box_mask' : 'DisplayNone'}}" 
+                        bind:tap="selectedRealModel"/>
+                    </view>
+                    
+                    <van-icon name="cross" class="{{ isPersonUpload ?'deleteBtn' : 'DisplayNone'}}" size="20px" 
+                        bind:tap='deleteModel'/>
+                    <view class="{{selectedPersonUpload ? 'selected_box_border' : 'DisplayNone'}}" />
+                </view>
+            </view>
+            
+            <view class="{{selectedPersonUpload ? 'emojiBox' : 'DisplayNone'}}">
+                <image src="../../../resource/image/emoji_happy_icon.svg" class="emoji"/>
+            </view>
+        </van-tab>
+
+        <van-tab title="模特" title-style='font-weight: bold;'>
+            <scroll-view scroll-x="true" class="scroll">
+                
+                <!-- 系统自带的 -->
+                <view wx:for="{{person_data}}" class="{{person.selected ? 'selected_box' : 'box'}}"
+                wx:for-item="person" wx:for-index="index" wx:key="index" 
+                bindtap="changeStyleBox" data-idx="{{index}}">
+                    <view class="img_box">
+                        <van-image
+                        fit='cover'
+                        width="100%"
+                        height="100%"
+                        src="{{person.path}}"
+                        id="{{'model' + person.id}}"
+                        />
+                        <view class="{{person.selected ? 'selected_box_mask' : 'box_mask'}}" />
+                    </view>
+                    
+                    <view class="{{person.selected ? 'selected_box_border' : 'DisplayNone'}}" />
+                </view>
+            </scroll-view>
+        </van-tab>
+    </van-tabs>
+    
+    <!-- 服饰 -->
+    <van-tabs active="{{1}}" bind:change="onChange" class="tabs" 
+    title-active-color='#EE0F0F'>
+
+        <van-tab title='自定义' title-style='font-weight: bold;'  style="position: relative;">
+            <!-- 传入自己的服饰 -->
+            <view class="scroll" style="z-index: 999;"> 
+                <view class="selected_box">
+                    <view class="img_box">
+                        <van-uploader file-list="{{ clothFileList }}" deletable="{{ false }}" 
+                        max-count='1' preview-size='260rpx'class='uploader'
+                        accept="image" upload-text='添加心仪的服饰' image-fit='cover' preview-full-image='{{false}}'
+                        bind:after-read='readCloth'
+                        bind:tap="selectedRealCloth"/>
+                        
+                        
+                        <view class="{{selectedClothUpload ? 'selected_box_mask' : 'DisplayNone'}}" 
+                        bind:tap="selectedRealCloth"/>
+                    </view>
+                    
+                    <van-icon name="cross" class="{{ isClothUpload ?'deleteBtn' : 'DisplayNone'}}" size="20px" 
+                        bind:tap='deleteCloth'/>
+                    <view class="{{selectedClothUpload ? 'selected_box_border' : 'DisplayNone'}}" />
+                </view>
+            </view>
+            
+            <view class="{{selectedClothUpload ? 'BoxMove' : 'DisplayNone'}}">
+                <view class="ratoteBox">
+                    <image src="../../../resource/image/sun.svg" class="box_img"/>
+                </view>
+            </view>
+        </van-tab>
+
+        <van-tab title="{{cloth_data.title}}" title-style='font-weight: bold;' wx:for="{{cloth_data_arr}}" wx:for-item="cloth_data" wx:for-index="tabIdx" wx:key="index" >
+            <scroll-view scroll-x="true" class="scroll">
+                <view wx:for="{{cloth_data.data}}" class="{{cloth.selected ? 'selected_box' : 'box'}}"
+                wx:for-item="cloth" wx:for-index="scrollIdx" wx:key="index" 
+                bindtap="changeStyleBoxCloth" data-scrollIdx="{{scrollIdx}}" data-tabIdx="{{tabIdx}}">
+                    <view class="img_box">
+                        <van-image
+                        fit='cover'
+                        width="100%"
+                        height="100%"
+                        src="{{cloth.path}}"
+                        />
+                        <view class="{{cloth.selected ? 'selected_box_mask' : 'box_mask'}}" />
+                    </view>
+                    <view class="{{cloth.selected ? 'selected_box_border' : 'DisplayNone'}}" />
+                </view>
+            </scroll-view>
+        </van-tab>
+    </van-tabs>
+    
+    <!-- 提交按钮 -->
+    <view class="btnBox margin_bottom">
+        <button class="submitBtn" bind:tap="SubmitBtn">开始设计</button>
+    </view>
+
+    <!-- Mask Popup close-on-click-overlay='{{false}}' -->
+    <van-popup show="{{ showWaitFitting }}" round >
+        <view class="popBox">
+            <view class="progress">
+                <view class="progressContent" style="width: {{progressWidth}};"></view>
+            </view>
+            
+            <text class="subText">正在快马加鞭制作中</text>
+            <view>已完成<text class="highlightText">{{progressWidth}}</text></view>
+        </view>
+    </van-popup>
+
+</view>

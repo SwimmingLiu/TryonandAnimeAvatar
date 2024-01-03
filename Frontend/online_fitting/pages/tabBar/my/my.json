@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "van-image": "@vant/weapp/image/index",
+        "van-icon": "@vant/weapp/icon/index"
+    },
+    "navigationBarTitleText": "个人中心"
+}
