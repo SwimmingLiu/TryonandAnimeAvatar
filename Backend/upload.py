@@ -2,10 +2,10 @@ import uuid
 import qiniu
 from io import BytesIO
 
-QINIU_AK = 'nMED_cospE1W9CYhYBTwP-GI0150Gh8Mhm0vq_Zf'
-QINIU_SK = '0fJs1ntpZygmAkF1gughSU6XXYHJRG0DwEG6_bsv'
-QINIU_BUCKET = 'flik1337-blog'
-QINIU_DOMAIN = 'oss.flik1337.com'
+QINIU_AK = ''
+QINIU_SK = ''
+QINIU_BUCKET = ''
+QINIU_DOMAIN = ''
 
 def get_random_filename():
     return str(uuid.uuid1())
